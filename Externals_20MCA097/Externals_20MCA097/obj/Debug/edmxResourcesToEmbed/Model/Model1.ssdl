@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AppointmentDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Appointment_Master">
+    <Key>
+      <PropertyRef Name="ap_id" />
+    </Key>
+    <Property Name="ap_id" Type="int" Nullable="false" />
+    <Property Name="Patient_name" Type="varchar" MaxLength="50" />
+    <Property Name="ap_date" Type="date" />
+    <Property Name="ap_for" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="User_Master">
+    <Key>
+      <PropertyRef Name="User_id" />
+    </Key>
+    <Property Name="User_id" Type="int" Nullable="false" />
+    <Property Name="User_Name" Type="varchar" MaxLength="50" />
+    <Property Name="User_Password " Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="AppointmentDBModelStoreContainer">
+    <EntitySet Name="Appointment_Master" EntityType="Self.Appointment_Master" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User_Master" EntityType="Self.User_Master" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

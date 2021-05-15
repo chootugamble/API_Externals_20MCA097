@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AppointmentDBModelStoreContainer" CdmEntityContainer="AppointmentDBEntities">
+    <EntitySetMapping Name="Appointment_Master">
+      <EntityTypeMapping TypeName="AppointmentDBModel.Appointment_Master">
+        <MappingFragment StoreEntitySet="Appointment_Master">
+          <ScalarProperty Name="ap_id" ColumnName="ap_id" />
+          <ScalarProperty Name="Patient_name" ColumnName="Patient_name" />
+          <ScalarProperty Name="ap_date" ColumnName="ap_date" />
+          <ScalarProperty Name="ap_for" ColumnName="ap_for" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User_Master">
+      <EntityTypeMapping TypeName="AppointmentDBModel.User_Master">
+        <MappingFragment StoreEntitySet="User_Master">
+          <ScalarProperty Name="User_id" ColumnName="User_id" />
+          <ScalarProperty Name="User_Name" ColumnName="User_Name" />
+          <ScalarProperty Name="User_Password_" ColumnName="User_Password " />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

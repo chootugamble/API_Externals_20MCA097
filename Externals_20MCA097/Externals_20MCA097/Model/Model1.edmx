@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="AppointmentDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Appointment_Master">
+          <Key>
+            <PropertyRef Name="ap_id" />
+          </Key>
+          <Property Name="ap_id" Type="int" Nullable="false" />
+          <Property Name="Patient_name" Type="varchar" MaxLength="50" />
+          <Property Name="ap_date" Type="date" />
+          <Property Name="ap_for" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="User_Master">
+          <Key>
+            <PropertyRef Name="User_id" />
+          </Key>
+          <Property Name="User_id" Type="int" Nullable="false" />
+          <Property Name="User_Name" Type="varchar" MaxLength="50" />
+          <Property Name="User_Password " Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="AppointmentDBModelStoreContainer">
+          <EntitySet Name="Appointment_Master" EntityType="Self.Appointment_Master" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User_Master" EntityType="Self.User_Master" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AppointmentDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Appointment_Master">
+          <Key>
+            <PropertyRef Name="ap_id" />
+          </Key>
+          <Property Name="ap_id" Type="Int32" Nullable="false" />
+          <Property Name="Patient_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ap_date" Type="DateTime" Precision="0" />
+          <Property Name="ap_for" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="User_Master">
+          <Key>
+            <PropertyRef Name="User_id" />
+          </Key>
+          <Property Name="User_id" Type="Int32" Nullable="false" />
+          <Property Name="User_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="User_Password_" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="AppointmentDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Appointment_Master" EntityType="Self.Appointment_Master" />
+          <EntitySet Name="User_Master" EntityType="Self.User_Master" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AppointmentDBModelStoreContainer" CdmEntityContainer="AppointmentDBEntities">
+          <EntitySetMapping Name="Appointment_Master">
+            <EntityTypeMapping TypeName="AppointmentDBModel.Appointment_Master">
+              <MappingFragment StoreEntitySet="Appointment_Master">
+                <ScalarProperty Name="ap_id" ColumnName="ap_id" />
+                <ScalarProperty Name="Patient_name" ColumnName="Patient_name" />
+                <ScalarProperty Name="ap_date" ColumnName="ap_date" />
+                <ScalarProperty Name="ap_for" ColumnName="ap_for" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="User_Master">
+            <EntityTypeMapping TypeName="AppointmentDBModel.User_Master">
+              <MappingFragment StoreEntitySet="User_Master">
+                <ScalarProperty Name="User_id" ColumnName="User_id" />
+                <ScalarProperty Name="User_Name" ColumnName="User_Name" />
+                <ScalarProperty Name="User_Password_" ColumnName="User_Password " />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AppointmentDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Appointment_Master">
+    <Key>
+      <PropertyRef Name="ap_id" />
+    </Key>
+    <Property Name="ap_id" Type="Int32" Nullable="false" />
+    <Property Name="Patient_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ap_date" Type="DateTime" Precision="0" />
+    <Property Name="ap_for" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="User_Master">
+    <Key>
+      <PropertyRef Name="User_id" />
+    </Key>
+    <Property Name="User_id" Type="Int32" Nullable="false" />
+    <Property Name="User_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="User_Password_" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="AppointmentDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Appointment_Master" EntityType="Self.Appointment_Master" />
+    <EntitySet Name="User_Master" EntityType="Self.User_Master" />
+  </EntityContainer>
+</Schema>

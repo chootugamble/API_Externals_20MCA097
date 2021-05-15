@@ -65,3 +65,7 @@ C:\Users\rohan\Documents\GitHub Project\API_Externals_20MCA097\Externals_20MCA09
 C:\Users\rohan\Documents\GitHub Project\API_Externals_20MCA097\Externals_20MCA097\Externals_20MCA097\obj\Debug\Externals_20MCA097.csproj.CopyComplete
 C:\Users\rohan\Documents\GitHub Project\API_Externals_20MCA097\Externals_20MCA097\Externals_20MCA097\obj\Debug\Externals_20MCA097.dll
 C:\Users\rohan\Documents\GitHub Project\API_Externals_20MCA097\Externals_20MCA097\Externals_20MCA097\obj\Debug\Externals_20MCA097.pdb
+C:\Users\rohan\Documents\GitHub Project\API_Externals_20MCA097\Externals_20MCA097\Externals_20MCA097\bin\EntityFramework.dll
+C:\Users\rohan\Documents\GitHub Project\API_Externals_20MCA097\Externals_20MCA097\Externals_20MCA097\bin\EntityFramework.SqlServer.dll
+C:\Users\rohan\Documents\GitHub Project\API_Externals_20MCA097\Externals_20MCA097\Externals_20MCA097\bin\EntityFramework.xml
+C:\Users\rohan\Documents\GitHub Project\API_Externals_20MCA097\Externals_20MCA097\Externals_20MCA097\bin\EntityFramework.SqlServer.xml
